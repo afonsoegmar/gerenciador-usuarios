@@ -1,7 +1,12 @@
+import React from "react";
 import "./App.css"
+import Cadastro from "./Componentes/cadastro";
 import Listagem from "./Componentes/Listagem.js"
 
 function App() {
+
+  
+   
 
   // Como funciona objeto em javascript
   const usuario = {
@@ -19,7 +24,7 @@ function App() {
 
   const qnt_vacina = usuario.vacinas_covid19.length - 1
 
-  const usuarios = [
+  const usuarios_padrao = [
     
       {nome: "Egmar", status: true},
       {nome: "azenha", status: false},
@@ -29,10 +34,9 @@ function App() {
     
   ]
 
-  console.log(usuarios)
-  //console.log(usuario)
-  //console.log(usuario.endereco.rua, usuario.endereco.complemento)
-  console.log(Object.keys(usuario))
+  const [usuarios, alteraUsuarios] = React.useState(usuarios_padrao);
+
+  
   return (
     <div className="container">
 
@@ -40,10 +44,9 @@ function App() {
         
         
         <Listagem usuarios={usuarios}/>
-        <div className="caixa">
-          <h2> Cadastro</h2>
+        <Cadastro usuarios={usuarios} alteraUsuarios={alteraUsuarios} />
 
-        </div>
+        
 
       </div >
       
