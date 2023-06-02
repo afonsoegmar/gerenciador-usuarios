@@ -10,6 +10,7 @@ function Listagem(props){
               <p> Nome: {item.nome} </p>
               <p> status: {item.status == true ?"Ativo" :"Banido"} </p>
               <p>email:{item.email}</p>
+              <button className="btn btn-secondary btn-sm">Remover</button>
               </div>
               
             )
