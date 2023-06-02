@@ -56,7 +56,7 @@ function App() {
       <div className="d-flex justify-content-around">
         
         
-        <Listagem usuarios={usuarios}/>
+        <Listagem usuarios={usuarios} alteraUsuarios={alteraUsuarios}/>
         <Cadastro usuarios={usuarios} alteraUsuarios={alteraUsuarios} />
 
         
