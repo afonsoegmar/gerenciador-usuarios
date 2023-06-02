@@ -69,7 +69,7 @@ function Cadastro(props) {
           <form onSubmit={(e)=>salvar(e)}>
 
           <div className="mb-3 form-floating">
-                        <input onChange={e=>alteraNome(e.target.value)} className="form-control" id="txtNome" placeholder="None"/>
+                        <input value={props.editando == null ? "": props.editando.nome} onChange={e=>alteraNome(e.target.value)} className="form-control" id="txtNome" placeholder="None"/>
                         <label htmlFor="txtNome" className="form-label">Nome</label>
                     </div>
                     <div className="mb-3 form-floating">
