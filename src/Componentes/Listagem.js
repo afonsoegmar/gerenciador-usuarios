@@ -9,6 +9,7 @@ function Listagem(props){
               <div style={{border:"1px solid #CCC"}}>
               <p> Nome: {item.nome} </p>
               <p> status: {item.status == true ?"Ativo" :"Banido"} </p>
+              <p>email:{item.email}</p>
               </div>
               
             )
